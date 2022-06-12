@@ -18,7 +18,7 @@
     <header id="header">
         <div class="wrapper">
             <div class="header__inner">
-                <a href="#" class="header__logo">
+                <a data-scroll="#intro" class="header__logo">
                     <img src="assets/img/intro-logo.png" alt="">
                     <h4>Международная<br> академия<br> бизнеса</h4>
                 </a>
@@ -28,22 +28,22 @@
                 <nav class="header__menu">
                     <ul class="nav__list">
                         <li>
-                            <a href="#" class="nav__link">О проекте</a>
+                            <a data-scroll="#about" class="nav__link">О проекте</a>
                         </li>
                         <li>
-                            <a href="#" class="nav__link">Услуги</a>
+                            <a data-scroll="#uslugi" class="nav__link">Услуги</a>
                         </li>
                         <li>
-                            <a href="#" class="nav__link">Выдаваемые документы</a>
+                            <a data-scroll="#documents" class="nav__link">Выдаваемые документы</a>
                         </li>
                         <li>
-                            <a href="#" class="nav__link">Тарифы</a>
+                            <a data-scroll="#tarif" class="nav__link">Тарифы</a>
                         </li>
                         <li>
-                            <a href="#" class="nav__link">Оформление</a>
+                            <a data-scroll="#oformlenie" class="nav__link">Оформление</a>
                         </li>
                         <li style="margin-right: 0;">
-                            <a href="#" class="nav__link">Контакты</a>
+                            <a data-scroll="#contacts" class="nav__link">Контакты</a>
                         </li>
                         <div class="intro__contact mob">
                             <div class="intro__contacts dark center">
@@ -116,7 +116,7 @@
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="wrapper">
             <h1 class="section__title">О проекте</h1>
             <div class="about__paragraph">
@@ -145,7 +145,7 @@
         </div>
     </section>
 
-    <section class="give">
+    <section class="give" id="uslugi">
         <div class="wrapper">
             <h1 class="section__title">Что это дает</h1>
             <div class="give__inner">
@@ -165,7 +165,7 @@
                         <div class="give__item">
                             <div class="give__item-number">
                                 <h1>02</h1>
-                                <img src="assets/img/give-item.png" alt="">
+                                <img src="assets/img/give-item2.png" alt="">
                             </div>
                             <div class="give__item-text">
                                 <h1 class="give__item-title">Опыт работ</h1>
@@ -176,7 +176,7 @@
                         <div class="give__item">
                             <div class="give__item-number">
                                 <h1>03</h1>
-                                <img src="assets/img/give-item.png" alt="">
+                                <img src="assets/img/give-item3.png" alt="">
                             </div>
                             <div class="give__item-text">
                                 <h1 class="give__item-title">Опыт работ</h1>
@@ -189,7 +189,7 @@
                         <div class="give__item">
                             <div class="give__item-number">
                                 <h1>04</h1>
-                                <img src="assets/img/give-item.png" alt="">
+                                <img src="assets/img/give-item4.png" alt="">
                             </div>
                             <div class="give__item-text">
                                 <h1 class="give__item-title">Опыт работ</h1>
@@ -200,7 +200,7 @@
                         <div class="give__item">
                             <div class="give__item-number">
                                 <h1>05</h1>
-                                <img src="assets/img/give-item.png" alt="">
+                                <img src="assets/img/give-item5.png" alt="">
                             </div>
                             <div class="give__item-text">
                                 <h1 class="give__item-title">Опыт работ</h1>
@@ -245,12 +245,12 @@
                         <a href="#">Ознакомьтесь с программой</a>
                     </div>
                 </div>
-                <form action="#" class="consult__form">
+                <form action="mail.php" method="POST" class="consult__form">
                     <h1 class="consult__form-title">Нужна консультация?</h1>
                     <h2 class="consult__form-subtitle">Оставьте заявку, и мы подберем вам обучение</h2>
-                    <input class="consult__form-input" type="text" placeholder="Ф. И. О.">
-                    <input class="consult__form-input" type="text" placeholder="Email">
-                    <input class="consult__form-input" type="text" placeholder="Телефон">
+                    <input class="consult__form-input" type="text" placeholder="Ф. И. О." name="user_name" required>
+                    <input class="consult__form-input" type="text" placeholder="Email" name="user_mail" required>
+                    <input class="consult__form-input" type="text" placeholder="Телефон" name="user_number" required>
                     <div class="consult__form-checkboxes">
                         <div class="consult__form-checkbox">
                             <input type="checkbox">
@@ -261,13 +261,13 @@
                             <h2>Согласен на получение рассылок</h2>
                         </div>
                     </div>
-                    <button class="consult__form-button">Отправить заявку</button>
+                    <button class="consult__form-button" type="submit">Отправить заявку</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <section class="documents">
+    <section class="documents" id="documents">
         <div class="wrapper">
             <h1 class="section__title sub">Выдаваемые документы</h1>
             <h2 class="section__subtitle">По завершению обучения каждый слушатель программы получает:</h2>
@@ -300,7 +300,7 @@
         </div>
     </section>
 
-    <section class="tarif">
+    <section class="tarif" id="tarif">
         <div class="wrapper">
             <div class="tarif__inner">
                 <div class="tarif__img">
@@ -326,7 +326,7 @@
         </div>
     </section>
 
-    <section class="consult second">
+    <section class="consult second" id="oformlenie">
         <div class="wrapper">
             <h1 class="section__title blue">Оформление</h1>
             <div class="consult__inner">
@@ -347,12 +347,12 @@
                         <a href="#">Ссылки для скачивания форм документов</a>
                     </div>
                 </div>
-                <form action="#" class="consult__form">
+                <form action="mail.php" method="POST" class="consult__form">
                     <h1 class="consult__form-title">Нужна консультация?</h1>
                     <h2 class="consult__form-subtitle">Оставьте заявку, и мы подберем вам обучение</h2>
-                    <input class="consult__form-input" type="text" placeholder="Ф. И. О.">
-                    <input class="consult__form-input" type="text" placeholder="Email">
-                    <input class="consult__form-input" type="text" placeholder="Телефон">
+                    <input class="consult__form-input" type="text" placeholder="Ф. И. О." name="user_name" required>
+                    <input class="consult__form-input" type="text" placeholder="Email" name="user_mail" required>
+                    <input class="consult__form-input" type="text" placeholder="Телефон" name="user_number" required>
                     <div class="consult__form-checkboxes">
                         <div class="consult__form-checkbox">
                             <input type="checkbox">
@@ -363,13 +363,13 @@
                             <h2>Согласен на получение рассылок</h2>
                         </div>
                     </div>
-                    <button class="consult__form-button">Отправить заявку</button>
+                    <button class="consult__form-button" type="submit">Отправить заявку</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer id="contacts">
         <div class="wrapper">
             <div class="intro__header foot">
                 <div>

@@ -14,7 +14,6 @@ $(document).ready(function () {
         checkScroll(scrollOffset);
     });
 
-
     function checkScroll(scrollOffset) {
         if (scrollOffset >= introH) {
             header.addClass("fixed");
@@ -23,10 +22,31 @@ $(document).ready(function () {
         }
     }
 
+    // Burger
+
     $('.header__burger').on('click', function () {
         $('.header__burger,.header__menu').toggleClass('active');
         $('body').toggleClass('lock')
     });
+
+    // Smooth
+
+    /* --------   Smooth scroll    ---------  */
+
+    $("[data-scroll]").on("click", function (event) {
+        event.preventDefault();
+
+        var $this = $(this)
+        blockId = $this.data('scroll'),
+            blockOffset = $(blockId).offset().top;
+
+        $('nav a').removeClass('active');
+        $this.addClass('active');
+
+        $('html, body').animate({
+            scrollTop: blockOffset
+        }, 1000)
+    })
 
 
 });
