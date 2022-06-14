@@ -827,8 +827,6 @@ header.fixed {
 }
 
 .section__title.white::before {
-  top: 16%;
-  left: -80px;
   background-color: #fff;
 }
 
@@ -1078,7 +1076,7 @@ header.fixed {
 }
 
 .consult {
-  padding: 7.875em 0;
+  padding: 2.875em 0;
   background: url(../assets/img/consult-bg.jpg) no-repeat;
   background-size: cover;
 }
@@ -1136,6 +1134,10 @@ header.fixed {
   line-height: 1.74;
 }
 
+.consult__programm-paragraph p a {
+  text-decoration: underline;
+}
+
 @media (max-width: 75em) {
   .consult__programm-paragraph p {
     font-size: 0.875rem;
@@ -1149,7 +1151,7 @@ header.fixed {
 }
 
 .consult__programm-time {
-  margin-bottom: 4.1875em;
+  margin-bottom: 1.6875em;
 }
 
 .consult__programm-time h1 {
@@ -1175,6 +1177,10 @@ header.fixed {
   }
 }
 
+.consult__programm-button {
+  margin-top: 2.5em;
+}
+
 .consult__programm-button a {
   padding: 1.4375em 3.25em;
   border: 2px solid #FFFFFF;
@@ -1194,6 +1200,13 @@ header.fixed {
   .consult__programm-button a {
     padding: 1.4375em 1.5625em;
     font-size: 0.9375rem;
+  }
+}
+
+@media (max-width: 31.25em) {
+  .consult__programm-button a {
+    font-size: 0.75rem;
+    padding: 1.4375em 1.25em;
   }
 }
 
@@ -1232,6 +1245,14 @@ header.fixed {
   font-size: 1.0625rem;
   font-weight: 400;
   color: #fff;
+}
+
+@media (max-width: 31.25em) {
+  .consult__form-subtitle {
+    margin-top: 0.9375em;
+    font-size: 0.875rem;
+    text-align: center;
+  }
 }
 
 .consult__form-input {
@@ -1352,6 +1373,12 @@ header.fixed {
   }
 }
 
+.documents__item-img {
+  margin-left: 3.125em;
+  -webkit-box-shadow: 0px 0px 14px 6px rgba(34, 60, 80, 0.2);
+          box-shadow: 0px 0px 14px 6px rgba(34, 60, 80, 0.2);
+}
+
 .documents__item-text {
   max-width: 585px;
 }
@@ -1470,6 +1497,8 @@ header.fixed {
 }
 
 .tarif__discount {
+  margin: 0.3125em 0;
+  line-height: 1.37;
   font-size: 1.125rem;
   color: #1C2029;
 }
@@ -1570,4 +1599,138 @@ header.fixed {
 
 footer {
   padding: 0.9375em 0;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  top: 0;
+  left: 0;
+  z-index: 100;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.popup.show {
+  display: inline;
+}
+
+.popup__body {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.875em 0.625em;
+}
+
+@media (max-width: 56.875em) {
+  .popup__body {
+    width: 90%;
+  }
+}
+
+.popup__content {
+  padding: 1.25em;
+  position: relative;
+  z-index: 10;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.popup__close {
+  position: absolute;
+  top: 0;
+  right: -6%;
+  font-family: PR-Bold;
+  font-size: 1.5625rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.popup__close:hover {
+  color: red;
+}
+
+.popup__title {
+  text-align: center;
+  margin-bottom: 1.875em;
+  font-family: PR-Bold;
+  font-size: 2.1875rem;
+}
+
+.popup__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.popup__input {
+  margin: 0.625em auto;
+  width: 100%;
+  outline: none;
+  padding: 0.9375em 0 0.9375em 1.5625em;
+  border: 1px solid #DDDDDD;
+  border-radius: 10px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.popup__input:focus, .popup__input:hover {
+  border: 1px solid #044CDA;
+}
+
+.popup__button {
+  padding: 0.875em 1.5em;
+  margin: 1.25em 0;
+  background-color: #044CDA;
+  border-radius: 10px;
+  color: #fff;
+  font-family: PR-Semi;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.popup__button:hover {
+  background-color: #022976;
+}
+
+.popup-check__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.popup-check__box p {
+  margin-left: 0.625em;
+  max-width: 400px;
+  line-height: 1.3;
+  color: #888888;
+  font-size: 0.875rem;
+}
+
+.popup-check__box p a {
+  color: #888888;
+}
+
+.popup__subtitle {
+  font-size: 1.875rem;
+  max-width: 400px;
+  text-align: center;
 }
