@@ -870,6 +870,10 @@ header.fixed {
   text-decoration: underline;
 }
 
+.about__paragraph p a:hover {
+  text-decoration: none;
+}
+
 @media (max-width: 58.75em) {
   .about__paragraph p {
     font-size: 0.875rem;
