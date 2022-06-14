@@ -880,6 +880,11 @@ header.fixed {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -906,6 +911,7 @@ header.fixed {
 
 .about__button {
   margin-right: 1.875em;
+  margin-bottom: 4.375em;
 }
 
 .about__button a {
@@ -922,6 +928,7 @@ header.fixed {
 .about__button a:hover {
   background-color: #B63316;
   color: #fff;
+  text-decoration: none;
 }
 
 @media (max-width: 75em) {
@@ -932,6 +939,12 @@ header.fixed {
 }
 
 @media (max-width: 58.75em) {
+  .about__button a {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 31.25em) {
   .about__button a {
     font-size: 0.75rem;
   }
@@ -1350,6 +1363,7 @@ header.fixed {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 3.125em 0;
 }
 
 .documents__item .documents__item-img {
