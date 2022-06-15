@@ -1666,13 +1666,7 @@ header.fixed {
 .input__file-button-text {
   line-height: 1;
   margin-top: 1px;
-  font-size: 1.5625rem;
-}
-
-@media (max-width: 58.125em) {
-  .input__file-button-text {
-    font-size: 1.125rem;
-  }
+  font-size: 1.0625rem;
 }
 
 .input__file-button {
@@ -1757,6 +1751,17 @@ footer {
   border-radius: 10px;
 }
 
+.popup__content.agree {
+  max-width: 900px;
+  max-height: 900px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.popup__content.agree p {
+  margin: 1.5625em 0;
+}
+
 .popup__close {
   position: absolute;
   top: 0;
@@ -1767,6 +1772,16 @@ footer {
 }
 
 .popup__close:hover {
+  color: red;
+}
+
+.popup__close.agree {
+  color: #000;
+  top: 3%;
+  right: 5%;
+}
+
+.popup__close.agree:hover {
   color: red;
 }
 
