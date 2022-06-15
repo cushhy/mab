@@ -255,12 +255,12 @@
                     <input class="consult__form-input" type="text" placeholder="Телефон" name="user_number" required>
                     <div class="consult__form-checkboxes">
                         <div class="consult__form-checkbox">
-                            <input type="checkbox">
-                            <h2>Принимаю условия Пользовательского соглашения</h2>
+                            <input type="checkbox" checked>
+                            <h2>Принимаю условия <a href="#">Пользовательского соглашения</a></h2>
                         </div>
                         <div class="consult__form-checkbox">
-                            <input type="checkbox">
-                            <h2>Согласен на получение рассылок</h2>
+                            <input type="checkbox" checked>
+                            <h2><a href="#">Согласен на получение рассылок</a></h2>
                         </div>
                     </div>
                     <button class="consult__form-button" type="submit">Отправить заявку</button>
@@ -338,9 +338,25 @@
                             России, компании малого и среднего бизнеса различной отраслевой принадлежности.</p>
                     </div>
                     <div class="consult__link">
-                        <a href="assets/img/Заявление.docx" target="_blank">Заявление о зачислении на программу
-                            повышения квалификации</a>
+                        <a href="assets/img/Заявление.docx" target="_blank">Заявление о зачислении на программу</a>
                     </div>
+                    <div class="input__wrapper">
+                        <input name="file" type="file" name="file" id="input__file" class="input input__file" multiple>
+                        <label for="input__file" class="input__file-button">
+                            <span class="input__file-icon-wrapper"><img class="input__file-icon"
+                                    src="assets/img/download-link.svg" alt="Выбрать файл" width="25"></span>
+                            <span class="input__file-button-text">Заполненное заявление*</span>
+                        </label>
+                    </div>
+                    <div class="input__wrapper">
+                        <input name="file" type="file" name="file" id="input__file" class="input input__file" multiple>
+                        <label for="input__file" class="input__file-button">
+                            <span class="input__file-icon-wrapper"><img class="input__file-icon"
+                                    src="assets/img/download-link.svg" alt="Выбрать файл" width="25"></span>
+                            <span class="input__file-button-text">Скан-копия диплома*</span>
+                        </label>
+                    </div>
+                    <h3 class="consult__discription">*поля не обязательные к заполнению</h3>
                 </div>
                 <form action="mail.php" method="POST" class="consult__form">
                     <h1 class="consult__form-title">Нужна консультация?</h1>
@@ -350,12 +366,12 @@
                     <input class="consult__form-input" type="text" placeholder="Телефон" name="user_number" required>
                     <div class="consult__form-checkboxes">
                         <div class="consult__form-checkbox">
-                            <input type="checkbox">
-                            <h2>Принимаю условия Пользовательского соглашения</h2>
+                            <input type="checkbox" checked>
+                            <h2>Принимаю условия <a href="#">Пользовательского соглашения</a></h2>
                         </div>
                         <div class="consult__form-checkbox">
-                            <input type="checkbox">
-                            <h2>Согласен на получение рассылок</h2>
+                            <input type="checkbox" checked>
+                            <h2><a href="#">Согласен на получение рассылок</a></h2>
                         </div>
                     </div>
                     <button class="consult__form-button" type="submit">Отправить заявку</button>
