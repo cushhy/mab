@@ -198,6 +198,7 @@ li {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 blockquote:before,
@@ -450,6 +451,7 @@ header.fixed {
   color: #fff;
   font-weight: 800;
   position: relative;
+  cursor: pointer;
 }
 
 .nav__link::after {
