@@ -24,4 +24,10 @@ $mail->Subject = 'Заявка с MAB';
 $mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone. '<br>Почта этого пользователя: ' .$mail;
 $mail->AltBody = '';
 
+if(!$mail->send()) {
+    echo 'Error';
+} else {
+    hedaer('location: thank-you.html');
+}
+
 ?>
