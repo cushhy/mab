@@ -5,23 +5,6 @@ $(document).ready(function () {
         scrollOffset = $(window).scrollTop();
 
 
-    /* --------  Fixed Header     ---------  */
-    checkScroll(scrollOffset)
-
-    $(window).on("scroll", function () {
-        scrollOffset = $(this).scrollTop();
-
-        checkScroll(scrollOffset);
-    });
-
-    function checkScroll(scrollOffset) {
-        if (scrollOffset >= introH) {
-            header.addClass("fixed");
-        } else {
-            header.removeClass("fixed");
-        }
-    }
-
     // Burger
 
     $('.header__burger').on('click', function () {
@@ -72,6 +55,13 @@ $(document).ready(function () {
         let modalParent = $this.parents(modalId);
 
         modalParent.removeClass('show');
+    });
+
+    $('.nav__link ').on('click', function () {
+        $('.header__menu ').removeClass('active');
+        $('body').removeClass('lock');
+        $('.header__burger').removeClass('active');
+
     });
 
 
