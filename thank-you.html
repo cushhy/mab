@@ -22,6 +22,7 @@
         }
 
         .thank {
+            padding: 0 100px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -36,7 +37,8 @@
         .thank-you {
             margin-bottom: 50px;
             font-weight: 700;
-            font-size: 70px;
+            font-size: 30px;
+            line-height: 1.2;
             text-align: center;
         }
 
@@ -49,10 +51,27 @@
         .back:hover {
             text-decoration: underline;
         }
+
+        a {
+            text-decoration: underline;
+
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
     </style>
 
     <div class="thank">
-        <h1 class="thank-you">Заявка отпралена! Спасибо!</h1>
+        <h1 class="thank-you">Добрый день!
+            Вы отправили заявку на курс повышения квалификации для специалистов НРС.<br>
+            Скоро с Вами свяжется персональный менеджер и поможет оформить необходимые документы.
+            Начать обучение можно будет уже сегодня после подтверждения оплаты!
+            Связаться с нами можно по телефону <a href="tel:+74955680920">+7-495-568-09-20</a> или по электронной почте
+            <a href="mailto:nrs@pk-nrs.ru">nrs@pk-nrs.ru</a>
+
+            С уважением, Международная академия бизнеса
+        </h1>
         <a href="index.html" class="back">Вернуться назад</a>
     </div>
 

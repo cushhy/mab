@@ -267,7 +267,8 @@ body.lock {
 header {
   width: 100%;
   height: 56px;
-  position: relative;
+  position: fixed;
+  z-index: 10;
   padding-top: 1.4375em;
 }
 
@@ -287,11 +288,6 @@ header::before {
     padding: 0.625em;
     height: 80px;
   }
-}
-
-header.fixed {
-  position: fixed;
-  z-index: 3;
 }
 
 @media (max-width: 58.75em) {
@@ -457,27 +453,24 @@ header.fixed {
 .nav__link::after {
   content: "";
   display: block;
-  position: absolute;
-  right: 0;
-  bottom: -10px;
-  width: 0;
-  height: 2px;
+  width: 100%;
+  height: 3px;
   background-color: #fff;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  opacity: 0;
+  position: absolute;
+  top: 115%;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: opacity .3s linear;
+  transition: opacity .3s linear;
 }
 
 .nav__link:hover::after {
-  content: "";
-  width: 100%;
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  height: 3px;
-  background-color: #fff;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  opacity: 1;
+}
+
+.nav__link.active::after {
+  opacity: 1;
 }
 
 @media (max-width: 58.75em) {
@@ -488,7 +481,7 @@ header.fixed {
 }
 
 .intro {
-  padding-top: 1.3125em;
+  padding-top: 6.3125em;
   background: url(../assets/img/intro-bg.jpg) no-repeat;
   background-size: cover;
 }
@@ -615,6 +608,7 @@ header.fixed {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-right: 1.25em;
 }
 
 .intro__contacts.dark a {
@@ -863,9 +857,10 @@ header.fixed {
 }
 
 .about__paragraph p {
-  margin-bottom: 1.5625em;
+  margin-bottom: 0.9375em;
   color: #1C2029;
   line-height: 1.74;
+  font-size: 1.125rem;
 }
 
 .about__paragraph p a {
@@ -1152,9 +1147,9 @@ header.fixed {
 .consult__programm-paragraph p {
   max-width: 650px;
   margin: 2em 0;
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: #fff;
-  line-height: 1.74;
+  line-height: 2;
 }
 
 .consult__programm-paragraph p a {
